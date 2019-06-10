@@ -1,4 +1,5 @@
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
  
@@ -32,7 +33,7 @@ public class UsingHamcrest {
  
         // Exception thrown.
         str = "Assert string containing something.";
-        assertThat(str, containsString("Not found"));
+        assertThat(str, is(equalTo("Not found")));
     }
  
 }
